@@ -30,13 +30,7 @@ Ensure you have the following installed:
 
 ### Steps to Set Up
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/expense-tracker.git
-   ```
 2. Navigate to the project directory:
-   ```sh
-   cd expense-tracker
-   ```
 3. Set up the database:
    - Create a MySQL database: `expense_tracker`
    - Update `hibernate.cfg.xml` with your MySQL credentials.
