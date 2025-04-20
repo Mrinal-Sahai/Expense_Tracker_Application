@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #ecebc9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.expensetracker.controller.VisualController">
+
+    <top>
+        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="926.0" spacing="20" style="-fx-background-color: #143D60;">
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="110.0" text="Select Month:" textFill="#fff9f9">
+            <font>
+               <Font name="Franklin Gothic Medium Italic" size="18.0" />
+            </font></Label>
+            <ChoiceBox fx:id="monthChoiceBox" prefHeight="28.0" prefWidth="151.0" />
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="100.0" text="Select Year:" textFill="WHITE">
+            <font>
+               <Font name="Franklin Gothic Medium Italic" size="18.0" />
+            </font></Label>
+            <ChoiceBox fx:id="yearChoiceBox" prefHeight="29.0" prefWidth="154.0" />
+        </HBox>
+    </top>
+
+    <center>
+        <HBox spacing="20" style="-fx-background-color: #ecebc9;">
+            <PieChart fx:id="pieChart" prefHeight="400.0" prefWidth="356.0" style="-fx-padding: 20; -fx-background-color: #ecebc9;" title="Category Wise Expense" />
+            <BarChart fx:id="barChart" barGap="10.0" categoryGap="20.0" prefHeight="410.0" prefWidth="550.0" style="-fx-padding: 10; -fx-alternative-column-fill-visible: Red; -fx-background-color: #ecebc9;" title="Monthly Expense Chart for a Year">
+                <xAxis>
+                    <CategoryAxis fx:id="monthAxis" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="expenseAxis" prefHeight="324.0" prefWidth="60.0" />
+                </yAxis>
+            </BarChart>
+        </HBox>
+    </center>
+   <bottom>
+      <ButtonBar prefHeight="54.0" prefWidth="926.0" style="-fx-background-color: #143D60; -fx-padding: 10;" BorderPane.alignment="CENTER">
+        <buttons>
+               <Button onAction="#loadPieChart" prefHeight="29.0" prefWidth="344.0" style="-fx-background-color: #A0C878; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Generate Pie Chart">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="31.0" prefWidth="88.0" style="-fx-border-color: white; -fx-border-image-width: 10; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #343e2c;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button onAction="#loadBarChart" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #A0C878; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Generate Bar Graph">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+   </bottom>
+
+</BorderPane>

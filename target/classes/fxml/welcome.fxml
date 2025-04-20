@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="776.0" style="-fx-background-color: #C3DCE2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.expensetracker.controller.WelcomeController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" prefHeight="81.0" prefWidth="817.0" style="-fx-background-color: #0F5263; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 5, 0, 2, 2);" text="WELCOME TO ">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <textFill>
+            <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="0.5909090972307957" startX="0.8181818236004222" startY="0.44318181095701276">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.800000011920929" green="0.8966666460037231" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="add" layoutX="550.0" layoutY="418.0" mnemonicParsing="false" onAction="#addUser" prefHeight="35.0" prefWidth="148.0" style="-fx-background-color: #31393C; -fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: white; -fx-border-width: 2;" text="ADD NEW" textFill="#eaeaea">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="remove" layoutX="128.0" layoutY="385.0" mnemonicParsing="false" onAction="#removeUser" prefHeight="46.0" prefWidth="238.0" style="-fx-background-color: #31393C; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: white;" text="REMOVE SELECTED USER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="userName" layoutX="495.0" layoutY="334.0" prefHeight="60.0" prefWidth="258.0" promptText="Enter new Username">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </TextField>
+      <ChoiceBox fx:id="userChoice" layoutX="95.0" layoutY="215.0" prefHeight="60.0" prefWidth="304.0" style="-fx-background-color: white; -fx-border-color: black; -fx-font-size: 25px; -fx-border-radius: 25; -fx-background-radius: 25;" />
+      <Button fx:id="enter" layoutX="114.0" layoutY="312.0" mnemonicParsing="false" onAction="#enter" prefHeight="45.0" prefWidth="267.0" style="-fx-background-color: #31393C; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: white; -fx-border-width: 3;" text="ENTER In Your ACCOUNT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Separator layoutX="469.0" layoutY="141.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="0.0" style="-fx-background-color: #92D56D;" />
+      <Label alignment="CENTER" layoutX="472.0" layoutY="210.0" prefHeight="17.0" prefWidth="304.0" text="New here ??">
+         <font>
+            <Font name="Bodoni MT Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="472.0" layoutY="258.0" prefHeight="17.0" prefWidth="304.0" text="Lets Make your account">
+         <font>
+            <Font name="Bodoni MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="warning" layoutX="19.0" layoutY="492.0" prefHeight="31.0" prefWidth="456.0" textFill="RED">
+         <font>
+            <Font name="Arial Narrow" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="73.0" prefHeight="81.0" prefWidth="817.0" style="-fx-background-color: #0F5263;" text="MY EXPENSE TRACKER">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0" startX="0.5795454527392532">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.800000011920929" green="0.8966666460037231" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="176.0" fitWidth="180.0" layoutX="-21.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icon.jpg" />
+         </image>
+      </ImageView>
+      <Line endX="38.800018310546875" endY="306.20001220703125" layoutX="433.0" layoutY="258.0" startX="38.800018310546875" startY="-106.60000610351562" />
+   </children>
+</Pane>
